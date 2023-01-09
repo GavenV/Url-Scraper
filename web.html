@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Register</title>
+  <style>
+    /* Add some style to the pages */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    .form-container h1 {
+      text-align: center;
+    }
+    .tab-group {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .tab-group button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .tab-group button.active {
+      color: #f60;
+    }
+    .tab-content > div {
+      display: none;
+    }
+    .tab-content > div.active {
+      display: block;
+    }
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    form input[type="submit"] {
+      background: #f60;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 3px;
+      width: 100%;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background: #ff8000;
+    }
+    .error {
+      color: #f00;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add a container for the login and register forms -->
+  <div class="form-container">
+    <!-- Add a tabbed interface for switching between the two forms -->
+    <div class="tab-group">
+      <button class="tab active" onclick="showTab(event, 'login')">Login</button>
+      <button class="tab" onclick="showTab(event, 'register')">Register</button>
+    </div>
+
+    <!-- Add the login form -->
+    <div class="tab-content" id="login">
+      <form action="login.php" method="post">
+        <label for="login-email">Email</label>
+        <input type="email" name="email" id="login-email">
+        <
